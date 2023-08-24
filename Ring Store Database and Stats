@@ -1,0 +1,30 @@
+-- Create a grocery store database 
+
+CREATE TABLE rings (id INTEGER PRIMARY KEY, name TEXT, source TEXT, size INTEGER, price INTEGER);
+
+INSERT INTO rings VALUES (1, "chunky ring", "handmade",  5, 35);
+INSERT INTO rings VALUES (2, "dainty ring", "secondhand", 7, 40);
+INSERT INTO rings VALUES (3, "crystal ring", "antique shop", 8, 30);
+INSERT INTO rings VALUES (4, "gold-plated ring", "antique shop", 7, 20);
+INSERT INTO rings VALUES (5, "absract ring", "handmade", 9, 30);
+INSERT INTO rings VALUES (6, "resin ring", "handmade", 5, 10);
+INSERT INTO rings VALUES (7, "silver ring", "pawn shop", 10, 25);
+INSERT INTO rings VALUES (8, "acrylic ring", "secondhand", 8, 25);
+INSERT INTO rings VALUES (9, "gold ring","antique shop", 5, 60);
+INSERT INTO rings VALUES (10, "spoon ring", "antique shop", 8, 30);
+INSERT INTO rings VALUES (11, "mood ring", "secondhand", 9, 5);
+INSERT INTO rings VALUES (12, "cluster ring", "handmade", 6, 30);
+INSERT INTO rings VALUES (13, "engraved ring", "handmade", 7, 45);
+INSERT INTO rings VALUES (14, "silicon ring", "secondhand", 5, 10);
+INSERT INTO rings VALUES (15, "birthsone ring", "antique shop", 7, 30);
+
+-- display the database ordered by size.
+SELECT * FROM rings 
+ORDER BY size;
+
+-- what is the sum of the prices of rings sold?
+SELECT SUM(price) FROM rings;
+
+-- what selection of rings are less than $40?
+SELECT * FROM rings WHERE price < 40 
+ORDER BY size;
